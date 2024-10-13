@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<style>
+   
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+        }
+      
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      
+        .card {
+          width: 45%;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+      
+        .card img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+        }
+      
+        @media (max-width: 768px) {
+          .card {
+            width: 100%;
+          }
+        }
+        .tit{
+          text-align: center;
+        }
+      </style>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="w-16 cursor-pointer" src="img/logo.png" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="http://localhost:5173/Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="http://localhost:5173/About.html">About Us</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="http://localhost:5173/Team1.html">Our Team</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="http://localhost:5173/feed.html">FeedBack</a>
+                    </li>
+             
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+
+    <div class="tit">
+        <h1>Our Developer Team</h1>
+      </div>
+    <div class="container">
+      <div class="card">
+        <img src="img/Hemant1.jpg" alt="Testimonial Avatar">
+        <h3>Hemant Borase</h3>
+        <p>Front-End,Back-End Developer</p>
+      </div>
+      <div class="card">
+        <img src="img/Prathamesh.jpg" alt="Testimonial Avatar">
+        <h3>Prathamesh Dixit</h3>
+        <p>Back-End Developer</p>
+      </div>
+      <div class="card">
+        <img src="img/Jahnavi.jpg" alt="Testimonial Avatar">
+        <h3>Jahnvi</h3>
+        <p>Front-End Developer</p>
+      </div>
+      <div class="card">
+        <img src="img/Harshraj.jpg" alt="Testimonial Avatar">
+        <h3>Harshraj Burungle</h3>
+        <p>Documentation,Literature Review</p>
+      </div>
+    </div>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+
+</html>
